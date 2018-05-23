@@ -11,6 +11,8 @@ app.set('views', path.join(__dirname, ''));
 app.engine('handlebars', hbs);
 app.set('view engine', 'handlebars');
 
+app.use(express.static(path.join(__dirname, 'css')));
+
 app.use('/', routes);
 
 // Set Port
